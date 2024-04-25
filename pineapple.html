@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Planet</title>
+    <link rel="icon" type="image/x-icon" href="icon2.jpeg">
+    <!-- CSS -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+/* Base */
+:root {
+    --clr-primary: deeppink;
+    --clr-secondary: #272d36;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    color: var(--clr-secondary);
+    overflow-x: hidden;
+    background-image: url("mainbackground.jpg");
+}
+
+.section {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    /* 1140px */
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 28px auto;
+    margin-top: 5%;
+}
+
+.grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.margin-right-md {
+    margin-bottom: 4.8rem !important;
+}
+
+strong {
+    font-weight: 500;
+}
+
+
+
+/* End Base */
+
+/* Menu */
+nav {
+    padding: 0 33px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 22;
+}
+
+label.logo {
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 30px;
+    font-weight: 700;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    padding: 7px 13px;
+    text-decoration: none;
+    color: var(--clr-secondary);
+}
+
+.menu a.active,
+.menu a:hover {
+    border-bottom: 2px solid var(--clr-primary);
+    transition: 0.3s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* End Menu */
+
+/* Hero Section */
+#hero-section {
+    background: whitesmoke;
+    padding: 132px 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+}
+
+.text,
+.visual {
+    width: 50%;
+}
+
+.text {
+    margin: 0 20px;
+}
+
+.visual img {
+    display: block;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+}
+
+#hero-section .text {
+    margin-left: 30px;
+}
+
+#hero-section .visual img {
+    margin-left: auto;
+}
+
+/* End Hero Section */
+
+/* How It Works */
+#how-it-works {
+    margin: 0 auto;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.box {
+    background: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px 5px;
+    margin: 0 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.box ion-icon {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.box:hover {
+    transform: rotate(5deg);
+}
+
+
+/* End How It Works */
+
+/* About */
+#about .visual img,
+#app .visual img {
+    margin-right: auto;
+}
+
+/* End About */
+
+/* Restaurant Menu */
+
+#menu{
+    background-color: whitesmoke;
+}
+
+.category {
+    list-style: none;
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.category li {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.category li.active {
+    color: deeppink;
+}
+
+.restaurant-menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+    row-gap: 40px;
+}
+
+.menu-item {
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+}
+
+.menu-item img {
+    width: 100%;
+}
+
+.order {
+    justify-content: space-between;
+}
+
+.btn-menu {
+    padding: 6px 10px;
+    font-size: 16px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid deeppink;
+    color: deeppink;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 8px 0;
+}
+
+.location {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+
+
+/* Footer */
+.footer {
+    background: white;
+    color: black;
+    padding: 30px 0;
+}
+
+.footer .container {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: deeppink;
+}
+
+.footer ul {
+    list-style: none;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.footer ul li {
+    cursor: pointer;
+}
+
+.footer-about {
+    width: 35%;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid #b2b2b2;
+}
+.wrapper {
+    display: flex;
+  }
+  
+  .container {
+    flex: 0 0 auto; /* This ensures the container doesn't grow or shrink */
+  }
+  
+  .right-column {
+    margin-top: 20%;
+    font-size:large;
+    flex: 1; /* This makes the description fill the remaining space */
+    justify-content: right;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .heading{
+    margin-bottom:5%;
+    font-size: larger;
+    font-weight: bolder;
+    color: #c6066c;
+  }
+  
+/* End Footer */
+
+
+    </style>>
+</head>
+<body>
+    <!-- Menu -->
+    <div class="menu">
+        <nav>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <ion-icon name="grid-outline"></ion-icon>
+            </label>
+
+            <label class="logo">Grill Chicken</label>
+
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="download.html">Download App</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+<div class="wrapper">
+
+    <div class="container">
+        <div class="restaurant-menu">
+            <div class="menu-item">
+                <img src="pineapple.jpg"
+                    alt="" />
+
+                <div class="title">Alpeno-Pineapple | Chineese & Thai</div>
+
+                <div class="location">Vellore, Tamil Nadu</div>
+
+                <div class="order flex">
+                    <div class="price">350 Rs.</div>
+                    <a href="pineapple.html" class="btn btn-menu">Order Now</a>
+                </div>
+            
+            
+                <div class="order-flex">
+                    <div class ="price">Nutrient values: 300 cal/unit</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-column">
+        <div class="heading">
+        <h1> About this product</h1></div>
+        Nutritionally, pineapple jalapeño pizza offers a balance of carbohydrates from the crust, protein from any meat toppings, and vitamins and minerals from the vegetables and fruit. While it can be a tasty option, it's essential to be mindful of portion sizes and toppings to keep it balanced.
+
+For a simple pineapple jalapeño pizza recipe, you'll need pizza dough, pizza sauce, shredded mozzarella cheese, diced pineapple, sliced jalapeños, and optionally cooked bacon or ham for added flavor. </div>
+</div>       
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container flex">
+                <div class="footer-about">
+                    <h2>About</h2>
+                    <p>
+                        For any further information<br>
+                        contact:<br>machinenimahitha@gmail.com
+                        <br>Regd No:22BDS0388<br>
+
+                    </p>
+                </div>
+    
+                <div class="footer-category">
+                    <h2>Our Menu</h2>
+    
+                    <ul>
+                        <li>Biryani</li>
+                        <li>Chicken</li>
+                        <li>Pizza</li>
+                        <li>Burger</li>
+                        <li>Pasta</li>
+                    </ul>
+                </div>
+    
+                <div class="quick-links">
+                    <h2>Quick Links</h2>
+    
+                    <ul>
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                        <li>Menu</li>
+                        <li>Order</li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+    
+                <div class="get-in-touch">
+                    <h2>Get in touch</h2>
+                    <ul>
+                        <li>Account</li>
+                        <li>Support Center</li>
+                        <li>Feedback</li>
+                        <li>Suggession</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="copyright">
+                <p>Copyright &copy; Made with ❤️ by team FoodPlanet</p>
+            </div>
+        </div>
+        <!-- End Footer -->
