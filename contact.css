@@ -1,0 +1,106 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 9%;
+    background-color: white;
+}
+
+.contact h2 {
+    color: black;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 95%;
+    margin-top: 2rem;
+}
+
+.contact-form,
+.social-media {
+    width: 48%;
+}
+
+.contact-form {
+    margin-left: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    text-transform: none;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: beige;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: black;
+    color: beige;
+}
+
+.contact-heading
+{
+    font-size: large;
+    color: black;
+    
+    margin-bottom: 0.5rem;
+}
+.social-media {
+    text-align: left;
+    margin-right: 3px;
+}
+
+.social-media p {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-stretch: expanded;
+    text-transform: none;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social-media ul li {
+    margin-right: 1rem;
+}
+
+.social-media ul li a {
+    color: beige;
+    text-decoration: none;
+    font-size: 2.5rem;
+}
+
+.social-media ul li a:hover {
+    color: black;
+}
+
+.fa-brands {
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
